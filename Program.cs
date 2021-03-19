@@ -47,7 +47,7 @@ namespace ValidadorDeDocumento
             var getCNPJ = Console.ReadLine();
             Console.ReadKey();
 
-
+             
             //Boolean
             if (new CNPJValidator().IsValid(getCNPJ))
                 Console.WriteLine($"CNPJ válido: {getCNPJ}");
@@ -67,13 +67,13 @@ namespace ValidadorDeDocumento
             //}
             Console.ReadKey();
         }
-        private static void TituloEleitoral()
+    private static void TituloEleitoral()
         {
             Console.WriteLine("Olá, digite o número do Título Eleitoral que deseja validar: ");
             var getTE = Console.ReadLine();
             Console.ReadKey();
 
-
+             
             //Boolean
             if (new TituloEleitoralValidator().IsValid(getTE))
                 Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
@@ -82,17 +82,17 @@ namespace ValidadorDeDocumento
                     $" inválido: {getTE}");
 
 
-            //Int
-            //try
-            //{
-            //new TituloEleitoralValidator().AssertValid(getTE);
-            //    Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
-            //}
-            //catch (Exception exc)
-            //{
-            //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
-            //}
-            Console.ReadKey();
+        //Int
+        //try
+        //{
+        //new TituloEleitoralValidator().AssertValid(getTE);
+        //    Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
+        //}
+        //catch (Exception exc)
+        //{
+        //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
+        //}
+        Console.ReadKey();
         }
     }
 }
