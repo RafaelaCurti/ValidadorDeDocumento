@@ -67,13 +67,22 @@ namespace ValidadorDeDocumento
             //}
             Console.ReadKey();
         }
+<<<<<<<<< Temporary merge branch 1
+    }
+    private static void TituloEleitoral()
+=========
         private static void TituloEleitoral()
+>>>>>>>>> Temporary merge branch 2
         {
             Console.WriteLine("Olá, digite o número do Título Eleitoral que deseja validar: ");
             var getTE = Console.ReadLine();
             Console.ReadKey();
 
+<<<<<<<<< Temporary merge branch 1
+             
+=========
 
+>>>>>>>>> Temporary merge branch 2
             //Boolean
             if (new TituloEleitoralValidator().IsValid(getTE))
                 Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
@@ -82,6 +91,19 @@ namespace ValidadorDeDocumento
                     $" inválido: {getTE}");
 
 
+<<<<<<<<< Temporary merge branch 1
+        //Int
+        //try
+        //{
+        //new TituloEleitoralValidator().AssertValid(getTE);
+        //    Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
+        //}
+        //catch (Exception exc)
+        //{
+        //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
+        //}
+        Console.ReadKey();
+=========
             //Int
             //try
             //{
@@ -93,6 +115,7 @@ namespace ValidadorDeDocumento
             //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
             //}
             Console.ReadKey();
+>>>>>>>>> Temporary merge branch 2
         }
     }
 }
