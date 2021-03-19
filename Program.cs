@@ -1,4 +1,5 @@
-﻿using Caelum.Stella.CSharp.Validation;
+﻿using Caelum.Stella.CSharp.Format;
+using Caelum.Stella.CSharp.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,15 +22,16 @@ namespace ValidadorDeDocumento
             var getCPF = Console.ReadLine();
             Console.ReadKey();
 
+            var CPF = new CPFFormatter().Format(getCPF);
 
             //Boolean
-            if (new CPFValidator().IsValid(getCPF))
-                Console.WriteLine($"CPF válido: {getCPF}");
+            if (new CPFValidator().IsValid(CPF))
+                Console.WriteLine($"CPF válido: {CPF}");
             else
-                Console.WriteLine($"CPF inválido: {getCPF}");
+                Console.WriteLine($"CPF inválido: {CPF}");
 
 
-            //Int
+            //Int e usando o CPF sem ser formatado
             //try
             //{
             //new CPFValidator().AssertValid(getCPF);
@@ -47,7 +49,7 @@ namespace ValidadorDeDocumento
             var getCNPJ = Console.ReadLine();
             Console.ReadKey();
 
-
+            var CNPJ = new CPFFormatter().Format(getCNPJ);
             //Boolean
             if (new CNPJValidator().IsValid(getCNPJ))
                 Console.WriteLine($"CNPJ válido: {getCNPJ}");
@@ -67,43 +69,19 @@ namespace ValidadorDeDocumento
             //}
             Console.ReadKey();
         }
-<<<<<<<<< Temporary merge branch 1
-    }
-    private static void TituloEleitoral()
-=========
+
         private static void TituloEleitoral()
->>>>>>>>> Temporary merge branch 2
         {
             Console.WriteLine("Olá, digite o número do Título Eleitoral que deseja validar: ");
             var getTE = Console.ReadLine();
             Console.ReadKey();
+            var TE = new TituloEleitoralFormatter().Format(getTE);
 
-<<<<<<<<< Temporary merge branch 1
-             
-=========
-
->>>>>>>>> Temporary merge branch 2
             //Boolean
-            if (new TituloEleitoralValidator().IsValid(getTE))
-                Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
+            if (new TituloEleitoralValidator().IsValid(TE))
+                Console.WriteLine($"Número do Título Eleitoral é válido: {TE}");
             else
-                Console.WriteLine($"Número do Título Eleitoral é" +
-                    $" inválido: {getTE}");
-
-
-<<<<<<<<< Temporary merge branch 1
-        //Int
-        //try
-        //{
-        //new TituloEleitoralValidator().AssertValid(getTE);
-        //    Console.WriteLine($"Número do Título Eleitoral é válido: {getTE}");
-        //}
-        //catch (Exception exc)
-        //{
-        //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
-        //}
-        Console.ReadKey();
-=========
+                Console.WriteLine($"Número do Título Eleitoral é {TE}");
             //Int
             //try
             //{
@@ -115,7 +93,6 @@ namespace ValidadorDeDocumento
             //    Console.WriteLine($"Número do Título Eleitoral é inválido: {getTE}. {exc.Message}");
             //}
             Console.ReadKey();
->>>>>>>>> Temporary merge branch 2
         }
     }
 }
